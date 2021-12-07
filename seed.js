@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-  "mongodb://localhost:27017/db_staycation",
+  "mongodb+srv://rafki:02193485122@cluster0.vxyi1.mongodb.net/db_staycation?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -518,14 +518,14 @@ var data = [
         nameBank: "Mandiri",
         nomorRekening: "089898",
         name: "elfin",
-        imageUrl: "images/9999999999.png",
+        imageUrl: "images/logo-mandiri.png",
       },
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
         nameBank: "BCA",
         nomorRekening: "878678",
         name: "elfin",
-        imageUrl: "images/9999999999.png",
+        imageUrl: "images/logo-bca.png",
       },
     ],
   },
