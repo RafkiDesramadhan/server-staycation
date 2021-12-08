@@ -77,7 +77,10 @@ module.exports = {
       const { id } = req.params;
       const item = await Item.find({ _id: id })
         .populate({ path: "featureId", select: "_id name qty imageUrl" })
-        .populate({ path: "activityId", select: "_id name type imageUrl" })
+        .populate({
+          path: "activityId",
+          select: "_id name type imageUrl itemId",
+        })
         .populate({ path: "imageId", select: "_id imageUrl" });
       const bank = await Bank.find();
       const testimonial = {
